@@ -67,3 +67,17 @@ classDiagram
 
     Library "1" -- "0..*" Book : has-a
 ```
+
+### Pizza
+```mermaid
+classDiagram
+    class Pizza{
+        -size: String
+        -toppings: ArrayList<String>
+        -price: double
+        +<<constructor>> Pizza()
+        +<<constructor>> Pizza(size: String)
+        +<<constructor>> Pizza(size: String, toppings: ArrayList<String>)
+        +displayPizza(): void
+    }
+```
