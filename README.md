@@ -81,3 +81,29 @@ classDiagram
         +displayPizza(): void
     }
 ```
+
+### Vending Machine
+```mermaid
+classDiagram
+    class ItemType {
+        <<enumeration>>
+        CHIPS
+        SODA
+        CANDY
+        -price: double
+        -aisle: int
+        <<constructor>> ItemType(price: double, aisle:int)
+        +getPrice(): double
+        +getAisle(): int
+    }
+    class  VendingItem {
+        -type: ItemType
+        -quantity: int
+        +<<constructor>> VendingItem(type: ItemType, quantity: int)
+        +getType(): ItemType
+        +getQuantity(): int
+        +restock(amount: int): void
+        +dispense(): boolean
+    }
+    VendingItem "0..*" -- "1" ItemType : "has-a"
+```
