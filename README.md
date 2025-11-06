@@ -107,3 +107,15 @@ classDiagram
     }
     VendingItem "0..*" -- "1" ItemType : "has-a"
 ```
+
+### Widget Factory
+```mermaid
+classDiagram
+    class Widget {
+        +factoryName: String
+        -productionCounter: int
+        -serialNumber: String
+        +getSerialNumber(): String
+        +getProductionCounter(): int
+    }
+```
