@@ -119,3 +119,16 @@ classDiagram
         +getProductionCounter(): int
     }
 ```
+
+### Math Helper
+```mermaid
+classDiagram
+    class MathHelper {
+        <<Utility>>
+        +<u>PI: double</u>
+        -<u>calculationCounter: int</u>
+        +<u>circleArea(double radius): double</u>
+        +<u>add(double num1, double num2): double</u>
+        +<u>getCalculationCounter(): int</u>
+    }
+```
