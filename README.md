@@ -126,9 +126,25 @@ classDiagram
     class MathHelper {
         <<Utility>>
         +<u>PI: double</u>
-        -<u>calculationCounter: int</u>
-        +<u>circleArea(double radius): double</u>
-        +<u>add(double num1, double num2): double</u>
-        +<u>getCalculationCounter(): int</u>
+        -calculationCounter: int$
+        +circleArea(double radius): double$
+        +add(double num1, double num2): double$
+        +getCalculationCounter(): int</u>$
     }
+```
+
+### Game Lobby
+```mermaid
+classDiagram
+    class Gamer {
+        -username: String
+        +getUsername(): String
+    }
+    class GameLobby {
+        +LOBBYSIZE: int = 4$
+        -gamerList: ArrayList~Gamer~$
+        +joinLobby(player: Gamer): void$
+        +displayLobby(): void$
+    }
+    GameLobby ..>Gamer:uses
 ```
